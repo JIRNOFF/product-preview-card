@@ -1,0 +1,152 @@
+:root {
+    --Green_Light: hsl(158, 36%, 37%);
+    --Green_Dark: hsl(158, 42%, 18%);
+    --Black: hsl(212, 21%, 14%);
+    --Grey: hsl(228, 12%, 48%);
+    --Cream: hsl(30, 38%, 92%);
+    --White: hsl(0, 0%, 100%);
+}
+
+HTML {
+    font-size: 14px;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: var(--Cream);
+}
+
+.main_wrap {
+    margin: 50px auto 20px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 95%;
+    max-width: 500px;
+    font-family: "Montserrat", sans-serif;
+}
+
+img {
+    border-radius: 7px 7px 0 0;
+}
+
+.txt_wrap {
+    background-color: var(--White);
+    border-radius: 0 0 7px 7px;
+    padding: 1.5rem 2rem;
+}
+
+.header {
+    color: var(--Grey);
+    font-weight: 600;
+    font-size: 0.8rem;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-family: "Fraunces", serif;
+    color: var(--Black);
+    font-weight: 800;
+}
+
+p {
+    color: var(--Grey);
+    font-weight: 600;
+    font-size: 0.9rem;
+    word-spacing: 3px;
+}
+
+.price_wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.price {
+    flex-grow: 1;
+    padding: 15px 0;
+}
+
+.price_1 {
+    font-family: "Fraunces", serif;
+    color: var(--Green_Light);
+    font-weight: 800;
+    font-size: 2rem;
+    flex-grow: 0;
+}
+
+.price_2 {
+    padding-left: 10px;
+    font-size: 0.9rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: var(--Grey);
+    text-decoration: line-through;
+}
+
+.btn {
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    background-color: var(--Green_Light);
+    border-radius: 8px;
+    font-weight: 600;
+    color: var(--White);
+
+}
+
+@media screen and (min-width: 855px) {
+    .main_wrap { 
+        flex-direction: row;
+        max-width: 1000px;
+        width: 95%;
+    }
+    img {
+        content: url('images/image-product-desktop.jpg');
+        border-radius: 10px 0 0 10px;
+        width: auto;
+        height: auto;
+    }
+    .item {
+        flex-grow: 1;
+        width: 45%;
+    }
+
+    .header {
+        font-size: 1.2rem;
+    }
+    h1 {
+        font-size: 3rem;
+    }
+    p {
+        font-size: 1.5rem;
+    }
+    .price_1 {
+        font-size: 4rem;
+    }
+    .price_2 {
+        font-size: 1.2rem;
+        padding-left: 20px;
+    }
+    .btn {
+        margin-top: 30px;
+        padding: 20px;
+        font-size: 1.6rem;
+    }
+    .txt_wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }  
+}
+
+.btn:hover {
+    background-color: var(--Green_Dark);
+}
